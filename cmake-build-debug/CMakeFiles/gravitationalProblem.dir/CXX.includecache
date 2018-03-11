@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/andrey/CLionProjects/gravitationalProblem/Particle.h
+
+/home/andrey/CLionProjects/gravitationalProblem/main.cpp
+iostream
+-
+Particle.h
+/home/andrey/CLionProjects/gravitationalProblem/Particle.h
+vector
+-
+cmath
+-
+
