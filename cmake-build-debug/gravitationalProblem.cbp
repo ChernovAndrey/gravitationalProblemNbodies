@@ -87,7 +87,19 @@
 		<Unit filename="/home/andrey/CLionProjects/gravitationalProblem/Particle.h">
 			<Option target="gravitationalProblem"/>
 		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/gravitationalProblem/RK.h">
+			<Option target="gravitationalProblem"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/gravitationalProblem/SolveMethod.h">
+			<Option target="gravitationalProblem"/>
+		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/gravitationalProblem/main.cpp">
+			<Option target="gravitationalProblem"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/gravitationalProblem/vectorOperations.cpp">
+			<Option target="gravitationalProblem"/>
+		</Unit>
+		<Unit filename="/home/andrey/CLionProjects/gravitationalProblem/vectorOperations.h">
 			<Option target="gravitationalProblem"/>
 		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/gravitationalProblem/CMakeLists.txt">

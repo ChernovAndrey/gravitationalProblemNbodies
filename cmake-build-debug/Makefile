@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/gravitationalProblem.dir/build.make CMakeFiles/gravitationalProblem.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+vectorOperations.o: vectorOperations.cpp.o
+
+.PHONY : vectorOperations.o
+
+# target to build an object file
+vectorOperations.cpp.o:
+	$(MAKE) -f CMakeFiles/gravitationalProblem.dir/build.make CMakeFiles/gravitationalProblem.dir/vectorOperations.cpp.o
+.PHONY : vectorOperations.cpp.o
+
+vectorOperations.i: vectorOperations.cpp.i
+
+.PHONY : vectorOperations.i
+
+# target to preprocess a source file
+vectorOperations.cpp.i:
+	$(MAKE) -f CMakeFiles/gravitationalProblem.dir/build.make CMakeFiles/gravitationalProblem.dir/vectorOperations.cpp.i
+.PHONY : vectorOperations.cpp.i
+
+vectorOperations.s: vectorOperations.cpp.s
+
+.PHONY : vectorOperations.s
+
+# target to generate assembly for a file
+vectorOperations.cpp.s:
+	$(MAKE) -f CMakeFiles/gravitationalProblem.dir/build.make CMakeFiles/gravitationalProblem.dir/vectorOperations.cpp.s
+.PHONY : vectorOperations.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... vectorOperations.o"
+	@echo "... vectorOperations.i"
+	@echo "... vectorOperations.s"
 .PHONY : help
 
 

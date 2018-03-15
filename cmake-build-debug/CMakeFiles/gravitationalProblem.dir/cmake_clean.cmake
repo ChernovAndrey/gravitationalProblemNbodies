@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gravitationalProblem.dir/main.cpp.o"
+  "CMakeFiles/gravitationalProblem.dir/vectorOperations.cpp.o"
   "gravitationalProblem.pdb"
   "gravitationalProblem"
 )

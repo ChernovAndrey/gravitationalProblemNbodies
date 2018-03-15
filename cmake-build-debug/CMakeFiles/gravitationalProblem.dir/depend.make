@@ -4,3 +4,5 @@
 CMakeFiles/gravitationalProblem.dir/main.cpp.o: ../Particle.h
 CMakeFiles/gravitationalProblem.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/gravitationalProblem.dir/vectorOperations.cpp.o: ../vectorOperations.cpp
+

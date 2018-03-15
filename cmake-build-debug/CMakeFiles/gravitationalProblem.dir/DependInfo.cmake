@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/andrey/CLionProjects/gravitationalProblem/main.cpp" "/home/andrey/CLionProjects/gravitationalProblem/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/main.cpp.o"
+  "/home/andrey/CLionProjects/gravitationalProblem/vectorOperations.cpp" "/home/andrey/CLionProjects/gravitationalProblem/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/vectorOperations.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
