@@ -62,7 +62,6 @@ public:
             t+=tau;
             variables=nVariables;
         }
-        cout<<"tau="<<tau<<endl;
         return U;
     }
 

@@ -32,19 +32,18 @@ public:
 
         variables = {s->y,v->y};
         nVariables = calculateNextValue(NewtonEq,tau,variables,t, mass , f->y);
-        s->y = nVariables.at(0);
-        v->y = nVariables.at(1);
+        s->y = nVariables[0];
+        v->y = nVariables[1];
+        cout<<"coord:"<<endl;
+        cout <<s->x<<'\t'<<s->y<<endl;
 
-//        s->x+=v->x*t+f->x*t*t/(2*mass);
-//        s->y+=v->y*t+f->y*t*t/(2*mass);
-//
-//        v->x += f->x * t/mass;
-//        v->y += f->y * t/mass;
     }
 
 
     vector<double> calculateNextValue(vector<double>(*F)(vector<double>,double,double, double),double tau,vector<double> variables,
                                       double t, double mass, double f){
+        cout<<"in calucate next value:"<<endl;
+        cout<<t<<"\t"<<mass<<'\t'<<f<<endl;
         vector<double> nVariables(variables.size());
         auto k1=F(variables,t,f,mass);
 
@@ -86,11 +85,15 @@ public:
         return nVariables;
 
     }
-
+    ~Particle(){
+        delete f;
+        delete s;
+        delete v;
+    }
 private:
     static vector<double> NewtonEq(vector<double> variables, double t,double f, double mass) {
         return vector<double>({
-                                       variables.at(1),
+                                       variables[1],
                                        f/mass
                                });
     }
