@@ -77,10 +77,12 @@ __device__ void calcAndSetSpeedAndCoord(Particle particle,double tau,double t){
 
 __global__ void calculate(Particle *particles, double* tau, double* t) {
         const double G = 498217402368e-12;
+        printf("%s\n","start calculate" );
         int i = blockIdx.x;
         Point *f = (struct Point*)malloc (sizeof (struct Point));
         Particle pi = particles[i];
         for (int j = 0; j < N; j++) {
+            printf("%s\n", "start i iteration");
             if (i == j) continue;
 
             Particle pj = particles[j];
@@ -92,9 +94,8 @@ __global__ void calculate(Particle *particles, double* tau, double* t) {
             f->y += Gmij*dy /(r*r*r);
         }
         particles[i].f=f;
-        particles[i].f->x +=100;
         calcAndSetSpeedAndCoord(particles[i],*tau,*t);
-        //free(f);
+        free(f);
 }
 
 // void writingDataInFile(double x, double y , int k){ // k - номер тела
@@ -104,70 +105,80 @@ __global__ void calculate(Particle *particles, double* tau, double* t) {
 //     file.close();
 // }
 
-__global__ void add(int *a, int *b, int *c){
-    printf("Hello, world from the device!\n");
-    *c= *a + *b;
-}
 
-// int main(){
-//     // cleanFiles(N);
-//     srand (time(NULL));
-//     //auto particles = getInitRandom();
-//     Particle* particles = getInitFor2Particle();
-//     double t = T0;
-//     double tau=TAU;
-//     double tf=TF;
-//     double *dev_tau;
-//     double *dev_T;
-//     Particle* dev_particles;
-//     int countIter = (tf-t)/tau;
+int main(){
+    // cleanFiles(N);
+    srand (time(NULL));
+    //auto particles = getInitRandom();
+    Particle* particles = getInitFor2Particle();
+    double t = T0;
+    double tau=TAU;
+    double tf=TF;
+    double *dev_tau;
+    double *dev_T;
+    Particle* dev_particles;
+    int countIter = (tf-t)/tau;
     
-//     int size= N * sizeof(Particle);
-//     cudaMalloc((void**)&dev_particles, size);
-//     cudaMalloc((void**)&dev_tau, sizeof(double));
-//     cudaMalloc((void**)&dev_T, sizeof(double));
+    int size= N * sizeof(Particle);
+    cudaMalloc((void**)&dev_particles, size);
+    cudaMalloc((void**)&dev_tau, sizeof(double));
+    cudaMalloc((void**)&dev_T, sizeof(double));
     
-//     cudaMemcpy(dev_particles, particles, size, cudaMemcpyHostToDevice);
-//     cudaMemcpy(dev_tau, &tau, sizeof(double), cudaMemcpyHostToDevice);
+    cudaMemcpy(dev_particles, particles, size, cudaMemcpyHostToDevice);
+    cudaMemcpy(dev_tau, &tau, sizeof(double), cudaMemcpyHostToDevice);
         
-//     cout <<particles[0].f->x << '\t'<<particles[0].s->y <<endl;
-//     for (int i = 0; i < countIter; i++) {
-//         cudaMemcpy(dev_T, &t, sizeof(double), cudaMemcpyHostToDevice);
-//         cout<<"T="<<*dev_T<<'\t'<<t<<endl;
-//      //   *dev_T+=0.01;
-//         calculate<<<N,1>>>(dev_particles,dev_tau,dev_T);
-//         t+=tau;
-//         cudaMemcpy(particles, dev_particles, size, cudaMemcpyDeviceToHost);
-//         cout <<particles[0].f->x << '\t'<<particles[0].s->y <<endl;
-//         // writingDataInFile(particles[0].s->x,particles[0].s->y,0);
-//         // writingDataInFile(particles[1].s->x,particles[1].s->y,1);     
-//     }
+    cout <<particles[0].f->x << '\t'<<particles[0].s->y <<endl;
+    for (int i = 0; i < countIter; i++) {
+        cout<<"start iter in host"<<endl;
+        cudaMemcpy(dev_T, &t, sizeof(double), cudaMemcpyHostToDevice);
+        // cout<<"T="<<*dev_T<<'\t'<<t<<endl;
+     //   *dev_T+=0.01;
+        calculate<<<N,1>>>(dev_particles,dev_tau,dev_T);
+        t+=tau;
+        cudaMemcpy(particles, dev_particles, size, cudaMemcpyDeviceToHost);
+        cout <<particles[0].f->x << '\t'<<particles[0].s->y <<endl;
+        // writingDataInFile(particles[0].s->x,particles[0].s->y,0);
+        // writingDataInFile(particles[1].s->x,particles[1].s->y,1);     
+    }
 
-//     free(particles);
-//     cudaFree(dev_particles);cudaFree(dev_T);cudaFree(dev_tau);
-//     return 0;
-// }
-
-int main(void){
-    int a, b, c;
-    int *dev_a, *dev_b, *dev_c;
-    int size= sizeof(int);
-    cudaMalloc((void**)&dev_a, size);
-    cudaMalloc((void**)&dev_b, size);
-    cudaMalloc((void**)&dev_c, size);
-    a=3;
-    b=1;
-    cudaMemcpy(dev_a,&a,size, cudaMemcpyHostToDevice);
-    cudaMemcpy(dev_b,&b,size, cudaMemcpyHostToDevice);
-
-    add<<< 1,1 >>>(dev_a,dev_b,dev_c);
-    cudaDeviceSynchronize();
-    cudaMemcpy(&c,dev_c,size, cudaMemcpyDeviceToHost);
-
-    cudaFree(dev_a);
-    cudaFree(dev_b);
-    cudaFree(dev_c);
-    cout<<c<<endl;
+    free(particles);
+    cudaFree(dev_particles);cudaFree(dev_T);cudaFree(dev_tau);
     return 0;
 }
+
+
+// #define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
+// inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort=true)
+// {
+//    if (code != cudaSuccess) 
+//    {
+//       fprintf(stderr,"GPUassert: %s %s %d\n", cudaGetErrorString(code), file, line);
+//       if (abort) exit(code);
+//    }
+// }
+
+// int main(void){
+//     int a, b, c;
+//     int *dev_a, *dev_b, *dev_c;
+//     int size= sizeof(int);
+//     // gpuErrchk( cudaMalloc((void**)&dev_a, size*sizeof(int)) );
+    
+//     cudaMalloc((void**)&dev_a, size);
+//     cudaMalloc((void**)&dev_b, size);
+//     cudaMalloc((void**)&dev_c, size);
+//     a=3;
+//     b=1;
+//     cudaMemcpy(dev_a,&a,size, cudaMemcpyHostToDevice);
+//     cudaMemcpy(dev_b,&b,size, cudaMemcpyHostToDevice);
+
+//     add<<< 1,1 >>>(dev_a,dev_b,dev_c);
+//     cudaDeviceSynchronize();
+//     cudaMemcpy(&c,dev_c,size, cudaMemcpyDeviceToHost);
+    
+//     cudaFree(dev_a);
+//     cudaFree(dev_b);
+//     cudaFree(dev_c);
+//     cout<<c<<endl;
+//     return 0;
+// }
 

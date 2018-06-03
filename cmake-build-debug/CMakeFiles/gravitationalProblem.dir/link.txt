@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/gravitationalProblem.dir/main.cpp.o CMakeFiles/gravitationalProblem.dir/vectorOperations.cpp.o  -o gravitationalProblem 
+/usr/bin/c++   -std=c++17 -fopenmp -g   CMakeFiles/gravitationalProblem.dir/main.cpp.o CMakeFiles/gravitationalProblem.dir/vectorOperations.cpp.o  -o gravitationalProblem 
