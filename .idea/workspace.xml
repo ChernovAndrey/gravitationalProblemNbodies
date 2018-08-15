@@ -7,31 +7,28 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration CONFIG_NAME="Debug" />
+      <configuration CONFIG_NAME="Release" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="058d723f-89f4-4843-b840-2274d962d3b7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Particle.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RK.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/main.cpp.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/files/0.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/files/1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/files/2.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/vectorOperations.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/vectorOperations.cpp.o" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Progress/1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Progress/count.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/main.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gravitationalProblem" afterPath="$PROJECT_DIR$/cmake-build-debug/gravitationalProblem" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-release/gravitationalProblem" afterPath="$PROJECT_DIR$/cmake-build-release/gravitationalProblem" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cuda/a.out" afterPath="$PROJECT_DIR$/cuda/a.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlotGraphics.nb" afterPath="$PROJECT_DIR$/PlotGraphics.nb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/CXX.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/gravitationalProblem.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/gravitationalProblem.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/gravitationalProblem.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cuda/simple.cu" afterPath="$PROJECT_DIR$/cuda/simple.cu" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/gravitationalProblem.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/gravitationalProblem.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/gravitationalProblem.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/gravitationalProblem.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/gravitationalProblem.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/gravitationalProblem.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-release/gravitationalProblem.cbp" afterPath="$PROJECT_DIR$/cmake-build-release/gravitationalProblem.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cuda/gravProblem.cu" afterPath="$PROJECT_DIR$/cuda/gravProblem.cu" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cuda/structs.h" afterPath="$PROJECT_DIR$/cuda/structs.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/0.txt" afterPath="$PROJECT_DIR$/files/0.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/1.txt" afterPath="$PROJECT_DIR$/files/1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/files/2.txt" afterPath="$PROJECT_DIR$/files/2.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -48,11 +45,31 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="322" column="30" lean-forward="false" selection-start-line="322" selection-start-column="30" selection-end-line="322" selection-end-column="30" />
+            <state relative-caret-position="144">
+              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/files/1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="0.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/files/0.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,20 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>double</find>
-      <find>tau</find>
-      <find>coord</find>
-      <find>cl</find>
-      <find>clea</find>
-      <find>ca</find>
-      <find>long double</find>
-      <find>at</find>
-      <find>init</find>
-      <find>{</find>
-      <find>writing</find>
-      <find>cout</find>
-      <find>move</find>
-      <find>wr</find>
       <find>12.</find>
       <find>t1</find>
       <find>getAc</find>
@@ -134,13 +137,27 @@
       <find>F</find>
       <find>particlesK2</find>
       <find>deleteVe</find>
-      <find>RK3</find>
       <find>deleteVectorObjects</find>
       <find>mov</find>
       <find>An</find>
       <find>writi</find>
       <find>writingDa</find>
       <find>compa</find>
+      <find>f</find>
+      <find>cout</find>
+      <find>fo</find>
+      <find>f0</find>
+      <find>Point f</find>
+      <find>writingD</find>
+      <find>writin</find>
+      <find>calculateR</find>
+      <find>writ</find>
+      <find>Rk2</find>
+      <find>cout&lt;&lt;</find>
+      <find>wri</find>
+      <find>RK1</find>
+      <find>RK2</find>
+      <find>RK3</find>
     </findStrings>
     <replaceStrings>
       <replace>long double</replace>
@@ -218,7 +235,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NumericalMethods/Lab9" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NumericalMethods/Lab10" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
@@ -239,10 +256,10 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.gravitationalProblem">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Release" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
-    <configuration name="gravitationalProblem" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="gravitationalProblem" TARGET_NAME="gravitationalProblem" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="gravitationalProblem" RUN_TARGET_NAME="gravitationalProblem">
+    <configuration name="gravitationalProblem" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="gravitationalProblem" TARGET_NAME="gravitationalProblem" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="gravitationalProblem" RUN_TARGET_NAME="gravitationalProblem">
       <envs />
     </configuration>
     <list size="2">
@@ -252,6 +269,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -284,33 +304,37 @@
       <workItem from="1527740444568" duration="1455000" />
       <workItem from="1527750381456" duration="5996000" />
       <workItem from="1527758585213" duration="12011000" />
+      <workItem from="1528042635221" duration="2695000" />
+      <workItem from="1528108288799" duration="11558000" />
+      <workItem from="1528194020310" duration="3155000" />
+      <workItem from="1528225679935" duration="22000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121606000" />
+    <option name="totallyTimeSpent" value="139036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1857" height="1092" extended-state="6" />
     <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17689331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277487" sideWeight="0.17689331" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3591623" sideWeight="0.74737424" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3591623" sideWeight="0.5710337" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3591623" sideWeight="0.42896628" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3591623" sideWeight="0.25262576" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32041883" sideWeight="0.49806523" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16970702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.4472084" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32041883" sideWeight="0.49806523" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39895287" sideWeight="0.5312327" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277487" sideWeight="0.12050857" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.4472084" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -531,7 +555,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/files/1.txt">
+    <entry file="file://$PROJECT_DIR$/PlotGraphics.nb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -539,7 +563,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlotGraphics.nb">
+    <entry file="file://$PROJECT_DIR$/files/1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -557,8 +581,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="322" column="30" lean-forward="false" selection-start-line="322" selection-start-column="30" selection-end-line="322" selection-end-column="30" />
+        <state relative-caret-position="144">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

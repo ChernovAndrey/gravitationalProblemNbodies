@@ -6,17 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/andrey/CLionProjects/gravitationalProblem/Particle.h
-vector
--
-iostream
--
-
 /home/andrey/CLionProjects/gravitationalProblem/main.cpp
 iostream
 -
-Particle.h
-/home/andrey/CLionProjects/gravitationalProblem/Particle.h
 vector
 -
 cmath

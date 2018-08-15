@@ -84,9 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/andrey/CLionProjects/gravitationalProblem/Particle.h">
-			<Option target="gravitationalProblem"/>
-		</Unit>
 		<Unit filename="/home/andrey/CLionProjects/gravitationalProblem/SolveMethod.h">
 			<Option target="gravitationalProblem"/>
 		</Unit>

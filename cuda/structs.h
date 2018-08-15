@@ -37,10 +37,10 @@ void getInitFor2Particle(Particle* &particles,Particle* &dev_particles){
     double y2 = 0;
     
     double vx1 = 0;
-    double vy1 = 498960e-6; 
+    double vy1 = 1.0; 
     double vx2 = 0;
-    double vy2 = -498960e-6;
-    double m = 2.0;
+    double vy2 = -1.0;
+    double m = 1.0;
     particles = (struct Particle*)malloc (2*sizeof (struct Particle));
  //    particles[0].s = (struct Point*)malloc(sizeof(struct Point));
  //    particles[0].v = (struct Point*)malloc(sizeof(struct Point));

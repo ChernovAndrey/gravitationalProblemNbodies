@@ -6,22 +6,20 @@
 #include <tuple>
 // для эталона tau =0.0001;T0 0; TF 1.0
 using namespace std;
-//# define N 13312
-#define N 2
-# define TAU 0.0125
+# define N 13*512
+//#define N 2
+# define TAU 0.001
 //# define TAU 10
 #define T0 0
 //#define TF 0.034492738
 //# define TF 12.58984937
 //# define TF 12.589849537
 //# define TF 2*M_PI
-# define TF 2*M_PI
-//# define TF 1.0
-//# define TF
+#define TF 0.01
 
 //const double G = 1.18555535802194e-04;
-//const double G = 498217402368e-12; // дни сантиметры килограммы.
-const double G = 4.0; // дни сантиметры килограммы.
+const double G = 498217402368e-12; // дни сантиметры килограммы.
+//const double G = 4.0; // дни сантиметры килограммы.
 //const double G = 0.004981367808;
 //const double G = 498136780.8;
 // время в днях
@@ -151,11 +149,8 @@ void calcForces(vector<Particle *> &particles) {
             double Gmij = G * pi->mass * pj->mass;
             f.x += Gmij * dx / (r * r * r);
             f.y += Gmij * dy / (r * r * r);
-            //         cout<< f.x <<" " << f.y<<endl;
         }
         particles[i]->f = f;
-        //   cout<<"f:"<<endl;
-        //    cout<<particles[i]->f.x<<'\t'<<particles[i]->f.y<<endl;
     }
 
 }
@@ -198,6 +193,10 @@ void moveParticle(vector<Particle *> &particles, const vector<vector<Particle *>
 void calculateRK1(vector<Particle *> &particles, double tau) {
 
     calcForces(particles);
+//    cout<<"s0 "<<particles[0]->s.x <<'\t'<< particles[0]->s.y <<endl;
+//    cout<<"s1 "<<particles[1]->s.x <<'\t'<< particles[1]->s.y <<endl;
+//    cout<<"f0 "<<particles[0]->f.x <<'\t'<< particles[0]->f.y <<endl;
+//    cout<<"f1 "<<particles[1]->f.x <<'\t'<< particles[1]->f.y <<endl;
     moveParticle(particles,{particles},{tau});
 
 }
@@ -292,9 +291,9 @@ double getError2Particles(double x, double y, double t) {
     double xAccur;
     double yAccur;
     tie(xAccur, yAccur) = getAccuracy2Particles2(t);
-    cout << "compare" << endl;
-    cout << "x " << xAccur << " " << x << endl;
-    cout << "y " << yAccur << " " << y << endl;
+//    cout << "compare" << endl;
+//    cout << "x " << xAccur << " " << x << endl;
+//    cout << "y " << yAccur << " " << y << endl;
     cout.precision(12);
 
     return max(abs(xAccur - x), abs(yAccur - y));
@@ -319,18 +318,17 @@ void compareSolution(){
     file2.close();
 }
 int main() {
-
-    cout<< 1.156e-06/6.429e-08<<endl;
-    cout<< 6.429e-08/3.770e-09;
+    cout<<"N="<<N<<endl;
 //    compareSolution();
+//
 //    cout<<"coef: "<<0.000240217/8.06703e-05;
 //    return 0;
 //    cout.precision(12);
 //    srand(time(NULL));
-    cout<<scientific;
+//    cout<<scientific;
     cleanFiles(2);
-//    auto particles = getInitRandom();
-    auto particles = getInitFor2Particle();
+    auto particles = getInitRandom();
+//    auto particles = getInitFor2Particle();
     double t = T0;
     double tau = TAU;
     double tf = TF;
@@ -343,19 +341,20 @@ int main() {
         t += tau;
         calculateRK4(particles, tau);
 //
-        writingDataInFile(particles[0]->s.x, particles[0]->s.y, 0);
-        auto curError = getError2Particles(particles[0]->s.x, particles[0]->s.y, t);
-        if (curError > error) {
-            error = curError;
-        }
+//        writingDataInFile(particles[0]->s.x, particles[0]->s.y, 0);
+//        writingDataInFile(particles[1]->s.x, particles[1]->s.y, 1);
+//        auto curError = getError2Particles(particles[0]->s.x, particles[0]->s.y, t);
+//        if (curError > error) {
+//            error = curError;
+//        }
     }
 //    for (int j = 0; j < particles.size(); ++j) {
 //        writingDataInFile(particles[j]->s.x, particles[j]->s.y, 1);
 //    }
-    cout << "ERROR: " << error << endl;
     auto end = chrono::high_resolution_clock::now();
+    cout << "ERROR: " << error << endl;
     auto timens = chrono::duration_cast<chrono::nanoseconds>(end - begin).count();
-    cout << timens / (1e+9) << "s" << endl;
+    cout << timens/(1e6) << "ms" << endl;
     deleteParticles(particles);
     return 0;
 }
